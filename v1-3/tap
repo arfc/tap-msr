@@ -13,28 +13,6 @@ include "/home/andrei2/Desktop/git/tap-msr/v1-3/mat_composition"
 
 include "/home/andrei2/Desktop/git/tap-msr/v1-3/core"
 
-% --- Cells (Final)
-
-surf 1000 pad -99 -108 0 150 270 360
-surf 1001 pad -99 -108 0 155 270 360
-
-surf 3000 cuboid -99 99 -108 108 0 310
-
-set bc 2 2 1
-%set bc 1
-
-%42 is the core lattice
-
-cell 200 2 fill 42 -1000
-cell 201 2 hast 1000 -1001
-cell 202 2 outside 1001
-
-%lat 3 9 0 0 1
-%300.0 2
-
-cell 300 0 fill 2 -3000
-cell 301 0 outside 3000
-
 %------------------------------------------------------------------------------------------
 %                MATERIALS
 %------------------------------------------------------------------------------------------
@@ -115,6 +93,12 @@ mat hast   -8.86 tmp 900 rgb 127 205 187  % g/cm3 for mixture
 22049.09c   -9.58652E-4   % Mass fraction of Ti-49
 22050.09c   -9.17896E-4   % Mass fraction of Ti-50
 
+%-----B4C for shutdown rod
+mat pois -2.52
+rgb 127 205 187
+6000.09c -0.2307
+5010.09c -0.7693
+
 % --- Cross section data library file path:
 
 set acelib "/home/andrei2/serpent/xsdata/jeff312/sss_jeff312.xsdata"
@@ -145,13 +129,14 @@ set gcu 0
 
 % --- Neutron population and criticality cycles:
 
-set pop 5000 500 50
+set pop 10000 500 50
 
 % --- Geometry and mesh plots:
 
-plot 3 4000 4000 1.0
-%plot 2 4000 4000 -99.0
-%plot 2 4000 4000 -105.0
+plot 33 8000 8000 1.0
+plot 13 8000 8000 -93.0
+%plot 13 8000 8000 -93.0
+%plot 13 8000 8000 -90.0
 %plot 2 4000 4000 -111.0
 %plot 2 4000 4000 -117.0
 %plot 2 4000 4000 -2.50

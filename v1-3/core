@@ -26,41 +26,68 @@ cell 5  X  fuel -3
 %-------- Pitch = 6cm -------------
 %-------- Mod Rod No. = 333 X 4 ---------------
 
-lat 42 1 0.0 0.0 33 36 6
+lat 42 1 0.0 0.0 34 37 6
 
-M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
-M M F M F M M F M F M M F M F M M F M F M M X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
-M M F M F M M F M F M M F M F M M F M F M M X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
-M M F M F M M F M F M M F M F M M F M F F F X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
-M M F M F M M F M F M M F M F M M F M F F F X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M F M F F F X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M F M F F F X X X X X X X X X X X
-M M F M F M M F M F M M F M F M M X X X X X X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M X X X X X X X X X X X X X X X X
-M M F M F M M F M F M M F M F M M X X X X X X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M X X X X X X X X X X X X X X X X
-M M M M M M M M M M M M M M M M M F F F F X X X X X X X X X X X X
-M M F M F M M F M F F X X X X X X X X X X X X X X X X X X X X X X
-M M M M M M M M M M M M F F F F X X X X X X X X X X X X X X X X X
-M M F M F M M F M F F X X X X X X X X X X X X X X X X X X X X X X
-M M M M M M M F M F F X X X X X X X X X X X X X X X X X X X X X X
-M M M M M M M F M F F X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
+X M M F M F M M F M F M M F M F M M F M F M M X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
+X M M F M F M M F M F M M F M F M M F M F M M X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
+X M M F M F M M F M F M M F M F M M F M F F F X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M M M M M M X X X X X X X X X X X
+X M M F M F M M F M F M M F M F M M F M F F F X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M F M F F F X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M F M F F F X X X X X X X X X X X
+X M M F M F M M F M F M M F M F M M X X X X X X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M X X X X X X X X X X X X X X X X
+X M M F M F M M F M F M M F M F M M X X X X X X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M X X X X X X X X X X X X X X X X
+X M M M M M M M M M M M M M M M M M F F F F X X X X X X X X X X X X
+X M M F M F M M F M F F X X X X X X X X X X X X X X X X X X X X X X
+X M M M M M M M M M M M M F F F F X X X X X X X X X X X X X X X X X
+X M M F M F M M F M F F X X X X X X X X X X X X X X X X X X X X X X
+X M M M M M M M F M F F X X X X X X X X X X X X X X X X X X X X X X
+X M M M M M M M F M F F X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+
+% --- Cells (Final)
+
+surf 1011 pad -99 -108 0 5.0 270 360     % Shutdown rod
+surf 1012 pad -99 -108 0 5.2 270 360     % Gap between rod and guide tube
+surf 1013 pad -99 -108 0 5.5 270 360     % guide tube outer radius
+surf 1000 pad -99 -108 0 150 270 360     % core filled with lattice
+surf 1001 pad -99 -108 0 155 270 360     % reactor vessel
+
+surf 3000 cuboid -99 99 -108 108 0 310  % Global cube containing everything
+
+set bc 2 2 1
+%set bc 1
+
+%42 is the core lattice
+
+cell 203 2 pois -1011             % 'pois' if shutdown rod 100% inserted
+cell 204 2 fuel 1011 -1012
+cell 205 2 hast 1012 -1013
+cell 200 2 fill 42 1013 -1000
+cell 201 2 hast 1000 -1001
+cell 202 2 outside 1001
+
+
+cell 300 0 fill 2 -3000
+cell 301 0 outside 3000
