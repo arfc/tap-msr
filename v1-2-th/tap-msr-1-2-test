@@ -4,20 +4,20 @@ set title "TAP MSR v1-2-th"
 % uses JEFF312-thermal law S(A,B), has lower k value
 %verify salt densities, assembly/mod rod numbers
 
-% source: ORNL TM 2017, 
+% source: ORNL TM 2017,
 % salt density: Ganz 1973 - 4.93, TAP - 5.01 -?
 
 
 
 % --- Pins - Basic:
 
-pin M                    %moderator rod  
+pin M                    %moderator rod
 zrh  1.15
 sic  1.25
 fuel
 
 pin F                    %fuel in core
-fuel 
+fuel
 
 pin X                    %filler fuel pin for periphery:created for readability
 fuel
@@ -26,7 +26,7 @@ fuel
 
 % ----------- IMPORT CORE LATTICE ASSEMBLY ---------------------
 
-include "/home/anshchaube/msr-neutronics/tap-msr/v1-2/core"
+include "../v1-2/core"
 
 % --- Cells (Final)
 
@@ -57,7 +57,7 @@ cell 301 0 outside 3000
 
 
 mat fuel   -5.01 tmp 900   % g/cm3 for mixture
-3006.09c   -0.000002418        % Mass fraction of Li-6 
+3006.09c   -0.000002418        % Mass fraction of Li-6
 3007.09c   -0.0483577563       % Mass fraction of Li-7
 9019.09c   -0.3296428341       % Mass fraction of F-19
 92235.09c  -0.0310998496       % Mass fraction of U-235
@@ -73,7 +73,7 @@ mat zrh -5.66 tmp 900 moder hzr 1001     % g/cm3 UNVERIFIED
 40096.09c -0.028908        % Mass fraction of Zr -96
 1001.09c  -0.018007        % Mass fraction of H - 1
 1002.09c  -0.0000041389        % Mass fraction of H - 2
-                             
+
 % --- SiC Cladding for moderator rods
 
 mat sic -3.21 tmp 900       % g/cm3 UNVERIFIED
@@ -102,7 +102,7 @@ mat hast   -8.86 tmp 900   % g/cm3 for mixture
 
 % --- Cross section data library file path:
 
-set acelib "/home/anshchaube/serpent_acelib/xsdata/jeff312/sss_jeff312.xsdata"
+set acelib "/home/andrei2/serpent/xsdata/jeff312/sss_jeff312.xsdata"
 therm hzr 900 hzr05.32t hzr06.32t   % 900K C-12
 
 

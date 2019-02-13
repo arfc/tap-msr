@@ -5,44 +5,31 @@ set title "TAP MSR v1-2"
 %uses jeff312 modified, for ZrH data
 %verify salt densities, assembly/mod rod numbers
 
-% source: ORNL TM 2017, 
+% source: ORNL TM 2017,
 % salt density: Ganz 1973 - 4.93, TAP - 5.01 -?
-
-
-
-% --- Pins - Basic:
-
-pin M                    %moderator rod  
-zrh  1.15
-sic  1.25
-fuel
-
-pin F                    %fuel in core
-fuel 
-
-pin X                    %filler fuel pin for periphery:created for readability
-fuel
-
-
 
 % ----------- IMPORT CORE LATTICE ASSEMBLY ---------------------
 
-include "/home/anshchaube/msr-neutronics/tap-msr/v1-2/core"
+include "/home/andrei2/Desktop/git/tap-msr/v1-3/core"
 
 % --- Cells (Final)
 
 surf 1000 pad -99 -108 0 150 270 360
+surf 1001 pad -99 -108 0 155 270 360
 
 surf 3000 cuboid -99 99 -108 108 0 310
-set bc 2 2 1
+
+%set bc 2 2 1
+set bc 1
 
 %42 is the core lattice
 
 cell 200 2 fill 42 -1000
-cell 201 2 outside 1000
+cell 201 2 hast 1000 -1001
+cell 202 2 outside 1001
 
-lat 3 9 0 0 1
-300.0 2
+%lat 3 9 0 0 1
+%300.0 2
 
 cell 300 0 fill 2 -3000
 cell 301 0 outside 3000
@@ -55,10 +42,8 @@ cell 301 0 outside 3000
 
 % --- Fuel (LiF-UF4 72.5+27.5 mole %)
 
-
-
-mat fuel   -5.01 tmp 923   % g/cm3 for mixture
-3006.09c   -0.000002418        % Mass fraction of Li-6 
+mat fuel   -5.01 tmp 900 rgb 253 231 37  % g/cm3 for mixture
+3006.09c   -0.000002418        % Mass fraction of Li-6
 3007.09c   -0.0483577563       % Mass fraction of Li-7
 9019.09c   -0.3296428341       % Mass fraction of F-19
 92235.09c  -0.0310998496       % Mass fraction of U-235
@@ -66,7 +51,7 @@ mat fuel   -5.01 tmp 923   % g/cm3 for mixture
 
 % --- Moderator ZrH
 
-mat zrh -5.66 tmp 923         % g/cm3 UNVERIFIED
+mat zrh -5.66 tmp 900 rgb 68 1 84 moder hzr 1001     % g/cm3 UNVERIFIED
 40090.09c -0.49793        % Mass fraction of Zr -90
 40091.09c -0.10980        % Mass fraction of Zr -91
 40092.09c -0.16967        % Mass fraction of Zr -92
@@ -74,10 +59,10 @@ mat zrh -5.66 tmp 923         % g/cm3 UNVERIFIED
 40096.09c -0.028908        % Mass fraction of Zr -96
 1001.09c  -0.018007        % Mass fraction of H - 1
 1002.09c  -0.0000041389        % Mass fraction of H - 2
-                             
+
 % --- SiC Cladding for moderator rods
 
-mat sic -3.21 tmp 923       % g/cm3 UNVERIFIED
+mat sic -3.21 tmp 900       % g/cm3 UNVERIFIED
 14028.09c  -0.64365       % Mass fraction of Si - 28
 14029.09c  -0.033866       % Mass fraction of Si - 29
 14030.09c  -0.02312       % Mass fraction of Si - 30
@@ -85,7 +70,7 @@ mat sic -3.21 tmp 923       % g/cm3 UNVERIFIED
 
 %--- Hastelloy Cladd1ing (Hastelloy-Hanes)
 
-mat hast   -8.86 tmp 923   % g/cm3 for mixture
+mat hast   -8.86 tmp 900  rgb 127 205 187 % g/cm3 for mixture
 28000.09c   -6.29060      % Mass fraction of Ni
 24000.09c   -0.62020      % Mass fraction of Cr
 42000.09c   -1.41760      % Mass fraction of Mo
@@ -103,7 +88,9 @@ mat hast   -8.86 tmp 923   % g/cm3 for mixture
 
 % --- Cross section data library file path:
 
-set acelib "/home/anshchaube/serpent_acelib/xsdata/jeff312/sss_jeff312.xsdata"
+set acelib "/home/andrei2/serpent/xsdata/jeff312/sss_jeff312.xsdata"
+therm hzr 900 hzr05.32t hzr06.32t   % 900K C-12
+
 
 % --- Black boundary condition:
 
@@ -117,9 +104,9 @@ set nfg  4  0.625E-6  5.5E-3  0.821
 
 %to enable B1 calculations
 
-ene b1test 1 0 0.625E-6  5.5E-3  0.821 1000
+%ene b1test 1 0 0.625E-6  5.5E-3  0.821 1000
 
-set fum b1test
+%set fum b1test
 
 % Cross section plotter
 %set xsplot 1000 1E-10 12.0
@@ -130,21 +117,21 @@ set pop 5000 500 50
 
 % --- Geometry and mesh plots:
 
-%plot 3 2000 2000 1.0
-%plot 2 2000 2000 0.0
-%mesh 3 2000 2000
-%mesh 2 2000 2000
+plot 3 8000 8000 1.0
+plot 2 8000 8000 2.50
+mesh 3 2000 2000
+mesh 2 2000 2000
 
 
 % ------------------------------------------------------------
 % branch test
-branch fuel0 stp fuel -5.0874 800
-branch fuel1 stp fuel -4.9602 900
-branch fuel2 stp fuel -4.833 1000
-branch fuel3 stp fuel -4.706 1100
-branch fuel4 stp fuel -4.579 1200
-branch fuel5 stp fuel -4.451 1300
+%branch fuel0 stp fuel -5.0874 800
+%branch fuel1 stp fuel -4.9602 900
+%branch fuel2 stp fuel -4.833 1000
+%branch fuel3 stp fuel -4.706 1100
+%branch fuel4 stp fuel -4.579 1200
+%branch fuel5 stp fuel -4.451 1300
 
-coef 1
-0
-6 fuel0 fuel1 fuel2 fuel3 fuel4 fuel5
+%coef 1
+%0
+%5 fuel1 fuel2 fuel3 fuel4 fuel5
