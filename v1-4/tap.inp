@@ -1,0 +1,53 @@
+set title "TAP MSR v1-2-th"
+
+include "./mat_composition.ini"
+include "./core.ini"
+
+
+% --- Cross section data library file path:
+
+%therm hzr 900 hzr05.32t hzr06.32t   % 900K C-12
+
+% --- group constant generation:
+
+set gcu 0 1 2 3 4
+
+%set nfg  4  0.625E-6  5.5E-3  0.821
+
+%to enable B1 calculations
+
+%ene b1test 1 0 0.625E-6  5.5E-3  0.821 1000
+
+%set fum b1test
+
+% Cross section plotter
+%set xsplot 1000 1E-10 12.0
+
+% --- Neutron population and criticality cycles:
+
+set pop 10000 500 50
+
+% --- Geometry and mesh plots:
+
+plot 3 8000 8000 0.0
+plot 1 8000 8000 4.5
+
+% --- Depletion parameters
+% --- Options for burnup calculation:
+%set bumode  2  % CRAM method
+%set pcc     1  % Predictor-corrector calculation on
+%set xscalc  2  % Cross sections from spectrum
+%set bunorm 2
+%set opti 3
+
+% --- Irradiation cycle:
+%set power 1.24E+9		% 6 GWth
+%set fmass 9.040E+6      % Fissile material mass in salt (Table 3, EVOL Final report)
+%set powdens 17.4691E-3
+
+%dep daystep
+%3
+%30 30 30 %30 30 30 30 30 30 30
+
+%set printm 1 0.0
+%set inventory all
