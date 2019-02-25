@@ -10,9 +10,9 @@ include "./core.ini"
 
 % --- group constant generation:
 
-set gcu 0 1 2 3 4
+%set gcu 1 2 3 F
 
-%set nfg  4  0.625E-6  5.5E-3  0.821
+%set nfg  2  0.625E-6  
 
 %to enable B1 calculations
 
@@ -25,12 +25,12 @@ set gcu 0 1 2 3 4
 
 % --- Neutron population and criticality cycles:
 
-set pop 10000 500 50
+set pop 10000 1000 100
 
 % --- Geometry and mesh plots:
 
-plot 3 8000 8000 0.0
-plot 1 8000 8000 4.5
+plot 3 2000 2000 0.0
+plot 1 2000 2000 4.5
 
 % --- Depletion parameters
 % --- Options for burnup calculation:
