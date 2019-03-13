@@ -1,0 +1,14 @@
+set title "TAP MSR v1-2-th"
+
+include "./tap.ini"
+set gcu 5 
+
+set nfg  2  0.625E-6  
+branch ctrl0 stp ctrlPois -5.873  900 
+branch ctrl1 stp ctrlPois -5.873  600 
+branch ctrl2 stp ctrlPois -5.873  1200 
+branch ctrl3 stp ctrlPois -5.873  1500 
+
+coef 1
+0
+4 ctrl0 ctrl1 ctrl2 ctrl3
