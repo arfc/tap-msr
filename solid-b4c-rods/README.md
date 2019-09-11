@@ -12,7 +12,7 @@ The control rods are solid, made of B4C with reactivity worth 3.9%. Control rods
 45 degrees symmetry with reflective boundary condition was used.
 
 10000 neutrons, 1000 active cycles, 100 inactive cycles gave STD+/-22pcm
-9 minutes
+9 minutes on 12 threads
 ## tap.ini
 Contains the serpent specific input parameters for running serpent2 code.
 Loads in the materials and geometry from separate files.
@@ -21,7 +21,7 @@ Loads in the materials and geometry from separate files.
 Contians the material definitions for tap-msr.
 
 ## core.ini
-Contains the TAP geometry definitions
+Contains the TAP geometry definitions. 333 moderator rods per quadrant, salt volume fraction (SVF) is 0.907268
 
 ## fuel, mod, clad, control, struct
 These files are used to calculate group XS for MOLTRES.
