@@ -1,0 +1,14 @@
+set title "TAP MSR v1-2-th"
+
+include "./tap.ini"
+set gcu 2 
+
+set nfg  2  0.625E-6  
+branch fuel0 stp fuel -4.9602  900 
+branch fuel1 stp fuel -5.12556 770
+branch fuel2 stp fuel -4.5786  1200
+branch fuel3 stp fuel -4.197   1500
+
+coef 1
+0
+4 fuel0 fuel1 fuel2 fuel3
