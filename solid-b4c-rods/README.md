@@ -18,10 +18,16 @@ Contains the serpent specific input parameters for running serpent2 code.
 Loads in the materials and geometry from separate files.
 
 ## mat_composition.ini
-Contians the material definitions for tap-msr.
+Contains burnable materials definitions for tap-msr.
 
-## core.ini
-Contains the TAP geometry definitions. 333 moderator rods per quadrant, salt volume fraction (SVF) is 0.907268
+## non_burnable_mats.ini
+Contains non-burnable materials definitions (moderator, control rods, etc).
+
+## core_xxx.ini
+Contains the TAP geometry definitions.
+xxx moderator rods per quadrant, salt volume fraction (SVF) is:
+0.907268 for 333 rods
+0.903648 for 347 rods
 
 ## fuel, mod, clad, control, struct
 These files are used to calculate group XS for MOLTRES.
