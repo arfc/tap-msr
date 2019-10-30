@@ -7,12 +7,12 @@ Several assumptions have been made due to lack of information.
 The density of the salt was determined using $`\rho(T)=6.105-0.001272T[K]`$
 which is based on https://aip.scitation.org/doi/10.1063/1.3253134 although the temperatures of interest are outside the support of the equation.
 
-The control rod design is based on the MSRE control rod design. 
+The control rod design is based on the MSRE control rod design.
 In order to fit the MSRE CR into the pin pitch of the TAP MSR, it was assumed that the thickness to outer diameter ratio was kept constant for all cylinders.
-The control rod length was arbitrarily set to 2/3 the height of the active core. 
+The control rod length was arbitrarily set to 2/3 the height of the active core.
 The CR guide tub and cladding were assumed to be Hastelloy
- 
-Moderator rods have been included in all latice cell locations. 
+
+Moderator rods have been included in all latice cell locations.
 This corresponds to a salt volume fraction of 0.455.
 This value is assumed to be the same as the salt volume fraction as a pin cell.
 
@@ -24,9 +24,9 @@ Loads in the materials and geometry from separate files.
 Contians the material definitions for tap-msr.
 
 ## core.ini
-Contains the TAP geometry definitions
+Contains the TAP geometry definitions for End-of-Life when all possible moderator rods are in the core.\
+1957 rods, SVF = 0.455026
 
 ## fuel, mod, clad, control, struct
-These files are used to calculate group XS for MOLTRES. 
+These files are used to calculate group XS for MOLTRES.
 All files load in tap.ini to insure a consistent model for XS generation
-
