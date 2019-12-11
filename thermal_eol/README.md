@@ -9,8 +9,8 @@ which is based on https://aip.scitation.org/doi/10.1063/1.3253134 although the t
 
 The control rod design is based on the MSRE control rod design.
 In order to fit the MSRE CR into the pin pitch of the TAP MSR, it was assumed that the thickness to outer diameter ratio was kept constant for all cylinders.
-The control rod length was arbitrarily set to 2/3 the height of the active core.
-The CR guide tub and cladding were assumed to be Hastelloy
+The control rod length was arbitrarily set to 2/3 the height of the active core. Control rods worth is 2463+/-7pcm
+The CR guide tub and cladding were assumed to be Hastelloy.
 
 Moderator rods have been included in all latice cell locations.
 This corresponds to a salt volume fraction of 0.455.
